@@ -1,0 +1,234 @@
+/* import the google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+*,
+*::before,
+*::after {
+  /* supress browser defaults and select alt box model */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", sans-serif;
+  /* set variables for colors */
+  --bg-primary: #4e7461;
+  --bg-secondary: #e0ded9;
+  --font-color-primary: #ffffff;
+  --font-color-secondary: #a3b18a;
+  --backup-color: #588157;
+}
+
+/* this styling is desktop first -- vh=viewpointheight*/
+body {
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* style the header/navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 50px;
+}
+
+/* style the children of the header */
+.navbar h2 {
+  color: var(--font-color-primary);
+  font-weight: 700;
+}
+
+.navbar nav ul {
+  display: flex; /*double check this*/
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--font-color-secondary);
+  font-size: 16px; /*shazam*/
+  margin-right: 25px;
+  transition: color 0.3s ease; /*animation must be triggered by an event*/
+}
+
+/* event that triggers line 54, specify outcome of transition */
+.navbar ul li:hover a {
+  color: var(--font-color-primary);
+}
+
+/* remove the margin of the rightmost list item */
+.navbar ul li:last-child a {
+  margin-right: 20px;
+}
+
+/* style of hire me button */
+.hire-button {
+  background: var(--backup-color);
+  color: var(--font-color-primary);
+  padding: 6px 16px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hire-button:hover {
+  background: var(--font-color-secondary);
+  color: var(--bg-primary);
+}
+
+/*  styling the hero section */
+.main {
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h4 {
+  font-size: 32px;
+  color: var(--font-color-primary);
+  font-weight: 600;
+}
+
+.main h4 span {
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+}
+
+.main p.title {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--font-color-primary);
+  margin-top: 8px;
+}
+
+.main p.subtitle {
+  font-size: 16px;
+  color: var(--font-color-primary);
+  margin-top: 20px;
+}
+
+.main img {
+  width: 150px;
+  height: 150px;
+  margin-top: 100px;
+  border-radius: 50%;
+}
+
+.services-assurances {
+  margin-top: 50px;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.services-assurances .item {
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space;
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-assurances .item:hover {
+  border-color: var(--font-color-primary);
+}
+
+.services-assurances .item .icon {
+  width: 46px;
+  height: 46px;
+  background: var(--font-color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.services-assurances .item .icon:hover {
+  background: var(--font-color-primary);
+}
+
+.services-assurances .item .icon i {
+  font-size: 30px;
+}
+
+.services-assurances .item .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.services-assurances .item .info h3 {
+  color: var(--font-color-secondary);
+  font-size: 28px;
+}
+
+.services-assurances .item .info p {
+  color: var(--font-color-primary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.services-assurances .item > i {
+  color: var(--bg-primary);
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.services-assurances .item:hover > i {
+  color: var(--font-color-primary);
+}
+
+.section-separator-title {
+  margin: 50px 50px 30px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+  color: var(--font-color-secondary);
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* about me section */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 0 50px;
+}
+
+.about-me img {
+  width: 300px;
+}
+
+.about-me .info h3 {
+  color: var(--backup-color);
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.about-me .info p {
+  color: var(--font-color-primary);
+  font-size: 14px;
+}
+
+.about-me .info button {
+  margin-top: 30px;
+}
