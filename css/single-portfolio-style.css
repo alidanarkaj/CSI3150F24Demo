@@ -1,9 +1,7 @@
 /* import the google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-*,
-*::before,
-*::after {
+* {
   /* supress browser defaults and select alt box model */
   margin: 0;
   padding: 0;
@@ -231,4 +229,260 @@ body {
 
 .about-me .info button {
   margin-top: 30px;
+}
+
+/* styling the skills section */
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.skills .left {
+  width: 680px;
+}
+
+.skills .left .info h3 {
+  color: var(--font-color-secondary);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.skills .left .info p {
+  color: var(--font-color-primary);
+  font-size: 14px;
+}
+
+.skills .left .info button {
+  margin-top: 30px;
+}
+
+.skills .right {
+  width: 420px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills .right .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--font-color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.skills .right .item i {
+  font-size: 34px;
+  color: var(--bg-primary);
+}
+
+/* style the footer */
+footer {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 80px 50px 40px;
+  /* pushed away from the main */
+  margin-top: 100px;
+}
+
+footer .start {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute; /* position is absolute, relative to parent node:footer*/
+  background: var(--font-color-secondary);
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 70%;
+  top: -16%;
+  left: 15%
+}
+
+footer .start h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer .start p {
+  font-size: 13px;
+  width: 35%;
+}
+
+footer .start button {
+  background: transparent;
+  border: 1px solid var(--bg-primary);
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+footer .start button:hover {
+  background-color: var(--backup-color);
+  border-color: var(--bg-primary);
+}
+
+footer .columns {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .columns .about-column {
+  flex: 2; /*controls the starting width of a flex item*/
+}
+
+footer .columns .about-column h3 {
+  color: var(--font-color-primary);
+  margin-bottom: 20px;
+}
+
+footer .columns .about-column p {
+  color: var(--bg-primary);
+  font-size: 15px;
+}
+
+footer .columns .links-column {
+  flex: 3;
+}
+
+footer .columns .links-column h4 {
+  color: var(--font-color-primary);
+  margin-bottom: 20px;
+}
+
+footer .columns .news-column {
+  color: var(--font-color-primary);
+  margin-bottom: 20px;
+}
+
+footer .columns .links-column a {
+  display: block;
+  text-decoration: none;
+  color: var(--bg-primary);
+  font-size: 14px;
+  line-height: 26px;
+  transition: color 0.3s ease;
+}
+
+footer .columns .links-column a:hover {
+  color: var(--font-color-secondary);
+}
+
+footer .columns .news-column {
+  flex: 3;
+}
+
+footer .columns .news-column p {
+  color: var(--bg-primary);
+  font-size: 15px;
+}
+
+footer .columns .news-column form {
+width: 100%;
+margin-top: 20px;
+position: relative;
+}
+
+footer .columns .news-column input{
+  width: 100%;
+  background: var(--font-color-secondary);
+  border: none;
+  padding: 13px;
+  font-weight: 400px;
+  font-size: 13px;
+}
+
+footer .columns .news-column form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 1%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+footer .columns .news-column form button:hover {
+  background: var(--font-color-primary);
+}
+
+footer .columns .news-column form button i {
+  font-size: 26px;
+  color: var(--font-color-primary);
+}
+
+footer .columns .news-column form button i {
+  color: var(--bg-secondary);
+}
+
+/* begin styling for css responsive web design */
+@media screen and (max-width: 1100px) {
+  /* write the changes to the css that needs to be done if you hit this checkpoint */
+  .services-assurances{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .services-assurances .item {
+    flex-basis: 49%;
+  }
+
+  .skills {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .skills .left {
+    width: 500px;
+  }
+
+  .skills .left .info h3 {
+    font-size: 22px;
+  }
+
+  .skills .left .info p {
+    font-size: 12px;
+  }
+
+  footer {
+    margin-top: 150px;
+  }
+
+  footer .start {
+    width: 90%;
+    left: 5%;
+    right: -20%;
+  }
+
+  footer .columns {
+    flex-wrap: wrap;
+  }
+
+  footer .columns .about-column,
+  footer .columns .links-column,
+  footer .columns .news-column {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 480px) {
 }
